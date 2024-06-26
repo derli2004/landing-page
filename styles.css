@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #000000;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ff0066; /* Raspberry color */
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background: url('background.png') no-repeat center center/cover;
+    height: 100vh;
+    animation: fadeIn 1s ease-in;
+    margin-top: 50px;
+}
+
+.content {
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff0066; /* Raspberry color */
+    white-space: nowrap; /* Ensure the heading stays in one line */
+    font-family: 'Calibri', sans-serif;
+    overflow: hidden; /* Ensures the content is hidden initially */
+    border-right: .15em solid #ff0066; /* Creates a typing cursor effect */
+    white-space: nowrap; 
+    margin: 0 auto; /* Keeps the text centered */
+    animation: 
+      typing 3.5s steps(40, end), /* Typing effect */
+      blink-caret .75s step-end infinite; /* Blinking cursor effect */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #ff0066; }
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.content button {
+    background-color: #ff0066; /* Raspberry color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content button:hover {
+    background-color: #ff3385;
+}
+
+.illustration img {
+    max-width: 100%;
+    object-fit: cover; /* Ensure the image covers the div */
+    display: block;
+    margin-left: 20%; /* Move the image to the left */
+}
+
+.about, .features, .courses, .testimonials, .contact {
+    padding: 50px 10%;
+    text-align: center;
+    animation: fadeInUp 1s ease-in;
+}
+
+.features, .courses, .testimonials {
+    background-color: #1a1a1a;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff0066; /* Raspberry color */
+}
+
+.feature-list, .course-list, .testimonial-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature, .course, .testimonial {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease;
+}
+
+.feature img, .course img, .testimonial img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.feature:hover, .course:hover, .testimonial:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #fff;
+}
+
+button[type="submit"] {
+    background-color: #ff0066; /* Raspberry color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff3385;
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
